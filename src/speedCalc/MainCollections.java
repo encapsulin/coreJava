@@ -1,9 +1,8 @@
-package collections;
+package speedCalc;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
-public class MainSpeedCalc {
+public class MainCollections {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("-=start=-");
 
