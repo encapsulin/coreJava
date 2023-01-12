@@ -1,10 +1,10 @@
-package demo.collections;
+package collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainList {
+public class MainArrayList {
     public static void main(String[] args) {
         System.out.println("start");
         List<Integer> list = new ArrayList(Arrays.asList(1,3,2,5,4));
