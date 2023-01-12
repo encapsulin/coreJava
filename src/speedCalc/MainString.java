@@ -1,6 +1,7 @@
 package speedCalc;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MainString {
     public static void main(String[] args) {
@@ -16,7 +17,15 @@ public class MainString {
         var list3 = List.of(str.split(""));
         System.out.println(list3);
 
-        System.out.println(str);
+        char[] cArray = str.toCharArray();
+        var list4 = Arrays.asList(cArray);
+//        ArrayList<Character> list5= new ArrayList<>(list4);
+        System.out.println(list4);
+
+//        int[] nums = new int[] { 1, 2, 3 };
+//        Integer[] nums2 = new Integer[] { 1, 2, 3 };
+//        var list5 = Arrays.stream(nums2).collect(Collectors.toList());
+//        System.out.println(list5);
 
         str = randomString(1000_000_00);
         System.out.println(str.length());
