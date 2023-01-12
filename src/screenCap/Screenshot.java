@@ -1,4 +1,4 @@
-package demo.misc;// Java Program to Capture full
+package screenCap;// Java Program to Capture full
 // Image of Screen
 import java.awt.*;
 import java.awt.image.BufferedImage;
