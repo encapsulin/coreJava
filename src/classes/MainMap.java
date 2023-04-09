@@ -1,4 +1,4 @@
-package demo.collections;
+package classes;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -6,17 +6,29 @@ import java.util.stream.Collectors;
 public class MainMap {
     public static void main(String[] args) {
         System.out.println("start");
+
+//        treemap();
+        sort();
+        System.out.println("stop");
+    }
+
+    static void map1() {
         //sort();
         //iterate();
 
-        Map<String, Integer> map = new HashMap<>();
-        System.out.println(map.put("A",1));
-        System.out.println(map.put(null,2));
-        System.out.println(map.put("A",3));
-        System.out.println(map.put("A",4));
-        System.out.println(map);
-
-        System.out.println("stop");
+//        Map<String, Integer> map = new LinkedHashMap<>();
+//        System.out.println(map.put("A",1));
+//        System.out.println(map.put(null,2));
+//        System.out.println(map.put("A",3));
+//        System.out.println(map.put("A",4));
+//        System.out.println(map);
+//
+//        var list = map.entrySet().stream().toList();
+//        System.out.println(list);
+//
+//        var list2 = map.entrySet().stream()
+//                .sorted((a,b)->a.getValue().compareTo(b.getValue())).toList();
+//        System.out.println(list2);
     }
 
     public static void sort() {
@@ -56,6 +68,11 @@ public class MainMap {
         ArrayList<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
         list.sort(Collections.reverseOrder(Map.Entry.comparingByValue()));
 
+        var mapFromList = list.stream()
+                .collect(Collectors.toMap(i -> i, i -> String.valueOf(i)
+                ,(o1,o2)->o1
+        ));
+        System.out.println(mapFromList);
 
     }
 
@@ -80,6 +97,20 @@ public class MainMap {
         for (Integer value : map.values()) {
             System.out.println(value);
         }
+    }
+
+    static void treemap() {
+        Comparator<String> cmp = new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o2.compareTo(o1);
+            }
+        };
+        var map = new TreeMap<String, Integer>(cmp);
+        map.put("a3", 1);
+        map.put("a2", 2);
+        map.put("a1", 3);
+        System.out.println(map);
     }
 }
 //    Comparator<Arrow> cmp = Comparator
