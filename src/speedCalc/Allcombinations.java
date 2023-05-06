@@ -11,13 +11,21 @@ public class Allcombinations {
     static Long t1 = System.currentTimeMillis();
 
     public static void main(String[] args) {
+        long result_sum = 0;
+        DecimalFormat df = new DecimalFormat("###,###,###");
 
-        for(int i=0; i< 10; i++)
-            main1();
+        int count = 10;
 
+        for(int i=0; i< count; i++) {
+            long result = main1();
+            System.out.printf("\n list_size: %s",df.format(result));
+            result_sum += result;
+        }
+
+        System.out.printf("\n avg: %s",df.format(result_sum/count));
     }
 
-    public static void main1() {
+    public static long main1() {
         t1 = System.currentTimeMillis();
         list = new ArrayList<>();
         list_size = 0;
@@ -39,7 +47,7 @@ public class Allcombinations {
 
 //        System.out.printf("\nStop time: %d", t2);
 //        System.out.printf("\nExec time: %dms, %ds", t2-t1, (t2-t1)/1000);
-
+return list_size;
     }
 
     public static void combs(String prefix, String str, int deep) {
