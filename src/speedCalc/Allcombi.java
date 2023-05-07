@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Allcombinations {
+public class Allcombi {
 
     static long list_size = 0;
     static List<String> list = new ArrayList<>();
