@@ -1,4 +1,4 @@
-package speedCalc;
+//package speedCalc;
 
 import java.lang.Math;
 import java.text.DecimalFormat;
