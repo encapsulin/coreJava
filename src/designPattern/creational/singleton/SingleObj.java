@@ -11,4 +11,8 @@ public class SingleObj {
     public static SingleObj getInstance(){
         return instance;
     }
+
+    void draw(){
+        System.out.println("SingleObj::draw()");
+    }
 }

@@ -1,6 +1,8 @@
 package designPattern.structural.proxy;
 
-public class RealImage implements Image {
+import designPattern.Shape;
+
+public class RealImage implements Shape {
 
     String fn;
 
