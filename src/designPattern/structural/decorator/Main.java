@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println();
 
-        RedShapeDecorator circleDecorator = new RedShapeDecorator(circle);
+        Decorator circleDecorator = new Decorator(circle);
         circleDecorator.draw();
     }
 }

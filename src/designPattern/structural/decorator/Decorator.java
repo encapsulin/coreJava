@@ -2,9 +2,9 @@ package designPattern.structural.decorator;
 
 import designPattern.Shape;
 
-public class RedShapeDecorator extends ShapeDecorator{
+public class Decorator extends ShapeDecorator{
 
-    public RedShapeDecorator(Shape shape){
+    public Decorator(Shape shape){
         super(shape);
     }
 
